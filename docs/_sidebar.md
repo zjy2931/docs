@@ -1,2 +1,1 @@
-* [首页](zh-cn/)
-* [指南](zh-cn/guide)
+* [直播相关api](/api)
