@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>文档</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
     <meta name="description" content="Description">
     <link rel="icon" href="https://7a6a-zjy-44bd31-1257853598.tcb.qcloud.la/call/chat_btn_phone.png" type="images/x-ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -13,14 +16,41 @@
 <body>
     <div id="app"></div>
     <script>
-    window.$docsify = {
-        name: '',
-        repo: '',
-        loadSidebar: true,
-    }
+        window.$docsify = {
+            name: '文档名称',
+            nameLink: {
+                '/zh-cn/': '#/zh-cn/',
+                '/': '/'
+            },
+            formatUpdated: '{MM}/{DD} {HH}:{mm}',
+            repo: 'https://github.com/zjy2931/docs.git',
+            loadNavbar: true,
+            loadSidebar: true,
+            subMaxLevel: 2,
+        }
+    </script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js')
+        }
     </script>
     <script src="//unpkg.com/vue"></script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="./js/copy-cod.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+        const gitalk = new Gitalk({
+            clientID: '1eca778fbbcf7916ff96',
+            clientSecret: 'aa148b608bdb3057f48288a9069e98dd4b787242',
+            repo: 'docs',
+            owner: 'zjy2931',
+            admin: ['zjy2931'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+    </script>
+    <!-- <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script> -->
 </body>
 
 </html>
