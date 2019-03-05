@@ -5,7 +5,19 @@
 > 还有这样
 
 ```javascript 
-    const data = new Img()
+    class Img{
+        constructor({title,fileID="no ID",content,user,theme}){
+            return{
+                title,
+                fileID,
+                content,
+                user,
+                theme
+            }
+        }
+    }
+    const img = new Img({title="this is a title"})
+    console.log(img)
 
 ```
 * 当然还可以这样
