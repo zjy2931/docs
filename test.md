@@ -27,7 +27,7 @@
       * 好物推荐 好物推荐不可用
       ![](http://ww1.sinaimg.cn/large/c2e8730ely1g69oiqksbgj20cl0kbmzj.jpg)
 
-    * pages/publicBooks/task
+   * pages/publicBooks/task
       * 广告视频不可用 
       ![](http://ww1.sinaimg.cn/large/c2e8730ely1g69om0lospj20cq0m4mzf.jpg)
     * pages/ranking/
